@@ -1,4 +1,4 @@
-// Different ways of declaring and initialising an array
+// Array ADT implementation
 // Author : Udayin Biswas, Date : 05/09/2020
 #include <iostream>
 using namespace std;
@@ -23,9 +23,32 @@ class Array {
                 cout<<A[i]<<endl;
             }
         }
-        
-        void appendElement(int x){}
-        void insertElementAtIndex(int x, int index){}
+        // Append an element to the array
+        void appendElement(int x){
+            if (length==size){
+                cout<<"Cannot insert element, array is full"<<endl;
+                return;
+            }
+            A[length-1] = x;
+            length++;
+            return;
+        }
+        // Inserting an element at a given index
+        void insertElementAtIndex(int x, int index){
+            if (length==size){
+                cout<<"Cannot insert element, array is full"<<endl;
+                return;
+            }
+            // Start from back and copy element from previous index to it
+            for (int i=length;i>index;i--){
+                A[i] = A[i-1];
+            }
+            // When we reach the index, simply put the element we need to insert since all values have been shifted
+            // to the right of index
+            A[index] = x;
+            length++;
+            return;
+        }
         void removeElement(int index){}
         bool searchElement(int x){return true;}
         int getElementAtIndex(int index){return 0;}
