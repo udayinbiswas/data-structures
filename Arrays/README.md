@@ -5,7 +5,9 @@ An array is a physical data structures which allocates contiguous blocks of memo
 
 This will declare and initialise an array in the stack. 
 
-Static array's size is declared at compile time **eg:** *int A[5];* . In C++, dynamic array's size can also be declared at run time. This is not a feature of C language. **e.g.** *cin>>n; int A[n];* .
+Static array's size is declared at compile time **eg:** *int A[5];* . 
+
+In C++, dynamic array's size can also be declared at run time. This is not a feature of C language. **e.g.** *cin>>n; int A[n];* .
 
 > int *p = new int[5];
 
