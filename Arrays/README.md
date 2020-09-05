@@ -18,7 +18,7 @@ Similar implementation in C done by malloc function:
 Static array's size is declared at compile time **e.g.:** *int A[5];* . 
 In C++, dynamic array's size can also be declared at run time. This is not a feature of C language. **e.g.** *cin>>n; int \*A = new int[n];* .
 
-# Array ADT
+## Array ADT
 Array representation is available in most languages but operations are not present. We can define our own operations to make it an abstract data type.
 
 ## Representation of data in array
