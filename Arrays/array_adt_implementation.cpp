@@ -55,11 +55,25 @@ class Array {
         }
         // Remove an element at index
         void removeElement(int index){
-
+            if (index<0 || index>=length){
+                cout<<"Invalid index"<<endl;
+                return;
+            }
+            // Shift elements to the right of index one to the left
+            for (int i=index;i<length;i++){
+                A[i] = A[i+1];
+            }
+            length--;
+            return;
         }
         // Search an element in array
-        bool searchElement(int x){
-            return true;
+        int searchElement(int x){
+            for (int i=0;i<length;i++){
+                if (A[i]==x){
+                    return i;
+                }
+            }
+            return -1;
         }
         // Get the element in array by index 
         int getElementAtIndex(int index){
@@ -83,7 +97,7 @@ class Array {
         }
         // Shift the array
         void shiftArray(int x){
-            
+
         }
 };
 
