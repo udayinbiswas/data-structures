@@ -38,7 +38,7 @@ class Array {
 
 int main(){
     int a[10] = {2,3,4,5};
-    Array array = Array(a,10,4);
+    Array array = Array(a,20,4);
     array.printArray();
 
     return 0;
