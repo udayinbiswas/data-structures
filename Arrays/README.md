@@ -5,7 +5,6 @@ This will declare and initialise an array in the stack:
 > int a[5] = {1,2,3,4,5};
 
 Static array's size is declared at compile time **eg:** *int A[5];* . 
-
 In C++, dynamic array's size can also be declared at run time. This is not a feature of C language. **e.g.** *cin>>n; int A[n];* .
 
 This will declare an array in the heap and return a pointer:
