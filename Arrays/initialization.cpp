@@ -1,12 +1,19 @@
 // Different ways of declaring and initialising an array
 // Author : Udayin Biswas, Date : 05/09/2020
-
 #include <iostream>
 using namespace std;
 
 void printArray(int array[],int length){
     for (int i=0;i<length;i++){
         cout<<array[i]<<",";
+    }
+    cout<<endl;
+    return;
+}
+
+void printArrayAddresses(int array[],int length){
+    for (int i=0;i<length;i++){
+        cout<<&array[i]<<",";
     }
     cout<<endl;
     return;
@@ -28,4 +35,6 @@ int main(){
     // Array method 5
     int e[] = {1,2,3,4,5,6};
     printArray(e,6);
+
+    return 0;
 }
