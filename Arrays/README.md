@@ -26,5 +26,16 @@ Array representation is available in most languages but operations are not prese
 2. Size or Capacity
 3. Length (Number of elements)
 
+## Methods
+1. ShowElements()
+2. Append(x)
+3. Insert(index,x)
+4. Delete(index)
+5. Search(x)
+6. Get(index)
+7. Set(index,x)
+8. Max()/Min()
+9. Reverse()
+10. Shift()/Rotate()
 
 
