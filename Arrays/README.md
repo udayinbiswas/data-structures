@@ -12,6 +12,7 @@ In C++, dynamic array's size can also be declared at run time. This is not a fea
 ### Declaring and Initializing an array in heap
 This will declare an array in the heap and can be accessed by a pointer:
 > int *p = new int[5];
+
 > p[0] = 1;
 
 Similar implementation in C done by malloc function:
