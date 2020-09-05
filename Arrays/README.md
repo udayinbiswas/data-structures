@@ -27,7 +27,7 @@ Array representation is available in most languages but operations are not prese
 3. Length (Number of elements)
 
 ## Methods
-1. ShowElements()
+1. PrintArray()
 2. Append(x)
 3. Insert(index,x)
 4. Delete(index)
