@@ -5,10 +5,6 @@ An array is a physical data structures which allocates contiguous blocks of memo
 This will declare and initialize an array in the stack: 
 > int a[5] = {1,2,3,4,5};
 
-#### Static vs Dynamic Array
-Static array's size is declared at compile time **e.g.:** *int A[5];* . 
-In C++, dynamic array's size can also be declared at run time. This is not a feature of C language. **e.g.** *cin>>n; int A[n];* .
-
 ### Declaring and Initializing an array in heap
 This will declare an array in the heap and can be accessed by a pointer:
 > int *p = new int[5];
@@ -17,6 +13,18 @@ This will declare an array in the heap and can be accessed by a pointer:
 
 Similar implementation in C done by malloc function:
 > int *p = (int*) malloc(5*sizeof(int));
+
+#### Static vs Dynamic Array
+Static array's size is declared at compile time **e.g.:** *int A[5];* . 
+In C++, dynamic array's size can also be declared at run time. This is not a feature of C language. **e.g.** *cin>>n; int *A = new int[n];* .
+
+# Array ADT
+Array representation is available in most languages but operations are not present. We can define our own operations to make it an abstract data type.
+
+## Representation of data in array
+1. Array Space
+2. Size or Capacity
+3. Length (Number of elements)
 
 
 
