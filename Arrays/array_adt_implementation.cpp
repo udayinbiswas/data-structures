@@ -39,6 +39,10 @@ class Array {
                 cout<<"Cannot insert element, array is full"<<endl;
                 return;
             }
+            if (index<0 || index>length){
+                cout<<"Invalid index"<<endl;
+                return;
+            }
             // Start from back and copy element from previous index to it
             for (int i=length;i>index;i--){
                 A[i] = A[i-1];
@@ -49,14 +53,38 @@ class Array {
             length++;
             return;
         }
-        void removeElement(int index){}
-        bool searchElement(int x){return true;}
-        int getElementAtIndex(int index){return 0;}
-        void setElementAtIndex(int index,int x){}
-        int maxElement(){return 0;}
-        int minElement(){return 0;}
-        void reverseArray(){}
-        void shiftArray(int x){}
+        // Remove an element at index
+        void removeElement(int index){
+
+        }
+        // Search an element in array
+        bool searchElement(int x){
+            return true;
+        }
+        // Get the element in array by index 
+        int getElementAtIndex(int index){
+            return 0;
+        }
+        // Set the element in array at index
+        void setElementAtIndex(int index,int x){
+
+        }
+        // Get the max element in array
+        int maxElement(){
+            return 0;
+        }
+        // Get the min element in array
+        int minElement(){
+            return 0;
+        }
+        // Reverse the array
+        void reverseArray(){
+
+        }
+        // Shift the array
+        void shiftArray(int x){
+            
+        }
 };
 
 int main(){
