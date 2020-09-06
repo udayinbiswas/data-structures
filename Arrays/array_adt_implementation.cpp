@@ -18,12 +18,14 @@ class Array {
             this->size = size;
             this->length = length;
         }
+
         // Display the elements of the array
         void printArray(){
             for (int i=0;i<length;i++){
                 cout<<A[i]<<endl;
             }
         }
+
         // Append an element to the array
         void appendElement(int key){
             if (length==size){
@@ -34,6 +36,7 @@ class Array {
             length++;
             return;
         }
+
         // Inserting an element at a given index
         void insertElementAtIndex(int key, int index){
             if (length==size){
@@ -54,6 +57,7 @@ class Array {
             length++;
             return;
         }
+
         // Remove an element at index
         void removeElement(int index){
             if (index<0 || index>=length){
@@ -67,6 +71,7 @@ class Array {
             length--;
             return;
         }
+
         // Search an element in array
         int searchElement(int key){
             for (int i=0;i<length;i++){
@@ -76,6 +81,7 @@ class Array {
             }
             return -1;
         }
+
         // Get the element in array by index 
         int getElementAtIndex(int index){
             if (index<0 || index>=length){
@@ -83,6 +89,7 @@ class Array {
             }
             return A[index];
         }
+
         // Set the element in array at index
         void setElementAtIndex(int index,int key){
             if (index<0 || index>=length){
@@ -91,6 +98,7 @@ class Array {
             }
             A[index] = key;
         }
+
         // Get the max element in array
         int maxElement(){
             int maxValue = INT_MIN;
@@ -99,6 +107,7 @@ class Array {
             } 
             return maxValue;
         }
+
         // Get the min element in array
         int minElement(){
             int minValue = INT_MAX;
@@ -107,10 +116,12 @@ class Array {
             } 
             return minValue;
         }
+
         // Reverse the array
         void reverseArray(){
 
         }
+        
         // Shift the array
         void shiftArray(int x){
 
