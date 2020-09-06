@@ -65,7 +65,7 @@ This creates string in **heap**:
 
 C compiler can print this character array representing string (i.e.end with '\0') but not any other array type.
 
-## Some string methods explanation
+## 3.Some string methods explanation
 ### Length of a string in C
 Traverse the character array till we find '\0' character.
 
