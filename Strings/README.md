@@ -31,21 +31,27 @@ char S[] = {65,66,67,68,69,70};
 
 A string is a set of characters.
 >char name[10] = {'j','o','h','n'}
+
 Character array is of length 10 but string is of length 4. There is a string delimiter at end of string characters '\0'
+
 >char name[10] = {'j','o','h','n','\0'}
+
 This array of characters is a string now. For storing a string of length n, we take n+1 spaces in array.
 
 >char name[] = {'j','o','h','n','\0'}
 
 > char name[] = "John"
+
 C compiler will add the delimiter on its own
 
 ### Declaring and Initializing an array in stack
 This creates string in **heap**:
+
 > char *name = "John";
 
 ### Printing in C
 > printf("%s",name);
+
 C compiler can print this character array representing string (i.e.end with '\0') but not any other array type.
 
 
