@@ -65,4 +65,16 @@ This creates string in **heap**:
 
 C compiler can print this character array representing string (i.e.end with '\0') but not any other array type.
 
+## Some string methods explanation
+### Length of a string in C
+Traverse the character array till we find '\0' character.
 
+### Changing case of a string
+Difference between lower and upper case codes of any alphabet is 32.
+
+LowerCase = Add(UpperCase,32)
+
+### Finding duplicates in String
+1. Hashing characters count in an array 
+
+> Array[s[i]-'a']+=1
