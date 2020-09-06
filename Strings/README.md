@@ -75,6 +75,6 @@ Difference between lower and upper case codes of any alphabet is 32.
 LowerCase = Add(UpperCase,32)
 
 ### Finding duplicates in String
-1. Hashing characters count in an array 
+1. Hashing characters count in an integer array and check if there is any index with count>1
 
 > Array[s[i]-'a']+=1
