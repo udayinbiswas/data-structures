@@ -5,11 +5,13 @@ Computer System works on binary system, but don't work on characters. For every 
 These codes are standard codes called ASCII(American National Standards Institue assigned). In other languages, codes
 are defined and are ISO codes called Unicodes. 
 
-ASCII codes: A - 65, B - 66, ..., Z-90
+**ASCII codes:**
 
-For lowercase alphabets, a - 97, b - 98, ..., z- 122
+*For uppercase alphabets:* A - 65, B - 66, ..., Z-90
 
-For numerical symbols, 0 - 48, 1 - 49, ... , 9 - 57
+*For lowercase alphabets:* a - 97, b - 98, ..., z- 122
+
+*For numerical symbols:* 0 - 48, 1 - 49, ... , 9 - 57
 
 Special characters also have ASCII codes like (,),$ etc.
 
@@ -17,7 +19,7 @@ For enter, ASCII code is 10 and for space it is 13 and for escape 27.
 
 ASCII codes start from 0-127. To represent these, we need 7 bits. In RAM, 1 byte is allocated so it takes 1 byte of unit memory. In memory, character is not stored but rather its code. for e.g.:65 for A.
 
-Unicodes takes 2 bytes and represented in hexadecimal form (4*4 bits) e.g. c03a
+Unicodes takes 2 bytes and represented in hexadecimal form (4*4 bits) **e.g.** c03a
 
 ## 2. Character Array
 
