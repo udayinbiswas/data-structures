@@ -6,15 +6,17 @@ using namespace std;
 
 class Array {
     private:
+        // Observation : these variables will be local to main stack when declaring by constructor
         int *A;
         int size;
         int length;
-        void swap(int *x,int *y){
-            int temp = *x;
-            *x = *y;
-            *y = temp;
+        void swap(int &x,int &y){
+            int temp = x;
+            x = y;
+            y = temp;
         }
     public:
+        // These methods will create a new activation record in stack
         // Constructor
         Array(int *A,int size,int length){
             this->A = A;
@@ -123,7 +125,7 @@ class Array {
         // Reverse the array
         void reverseArray(){
             for (int i=0,j=length-1;i<j;i++,j--){
-                swap(&A[i],&A[j]);
+                swap(A[i],A[j]);
             }
         }
 
@@ -133,7 +135,6 @@ int main(){
     int a[10] = {2,3,4,5};
 
     Array array = Array(a,20,4);
-    array.printArray();
     array.reverseArray();
     array.printArray();
     return 0;
