@@ -64,5 +64,3 @@ This creates string in **heap**:
 C compiler can print this character array representing string (i.e.end with '\0') but not any other array type.
 
 
-3. String 
-4. Creating a String
