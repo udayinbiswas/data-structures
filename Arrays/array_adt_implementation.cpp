@@ -6,15 +6,18 @@ using namespace std;
 
 class Array {
     private:
-        int A[20];
+        int *A;
         int size;
         int length;
+        void swap(int *x,int *y){
+            int temp = *x;
+            *x = *y;
+            *y = temp;
+        }
     public:
         // Constructor
-        Array(int array[],int size,int length){
-            for (int i=0;i<length;i++){
-                this->A[i] = array[i];
-            }
+        Array(int *A,int size,int length){
+            this->A = A;
             this->size = size;
             this->length = length;
         }
@@ -119,19 +122,19 @@ class Array {
 
         // Reverse the array
         void reverseArray(){
-
+            for (int i=0,j=length-1;i<j;i++,j--){
+                swap(&A[i],&A[j]);
+            }
         }
-        
-        // Shift the array
-        void shiftArray(int x){
 
-        }
 };
 
 int main(){
     int a[10] = {2,3,4,5};
+
     Array array = Array(a,20,4);
     array.printArray();
-
+    array.reverseArray();
+    array.printArray();
     return 0;
 }
