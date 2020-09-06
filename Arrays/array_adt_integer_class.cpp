@@ -251,8 +251,15 @@ Array* Array::Diff(Array *arr2){
 
 Array* Array::Inter(Array *arr2){
     int p1 = 0,p2 = 0;
-    // Declaring in heap, not stack so that we can return it
+    
+    // Declaring in heap, not stack so that we can return it by its pointer
+    // If we had done 'Array *array = &Array(length+arr2->length)' and then return by pointer of type 'Array*'
+    // this array variable will be local to this Inter method and cannot be accessed by its pointer outside this method
+    // So accessing it by address will return error/warning.
     Array *array = new Array(length+arr2->length);
+    // Instead if we declare it by stack we should return it by its type and not pointer
+    // Array array = Array(length+arr2->length) and then return by its type 'Array' so that copy is created of array
+    
     int i = 0;
     while (p1<length && p2<arr2->length){
         if (A[p1]==A[p2]){
