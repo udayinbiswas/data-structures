@@ -30,9 +30,11 @@ In C language,
 
 ### Declaring and Initializing an array in stack
 
-char S[] = {'a','b','c','d','e'};
-char S[5] = {'a','b','c','d','e'};
-char S[] = {65,66,67,68,69,70};
+>char S[] = {'a','b','c','d','e'};
+
+>char S[5] = {'a','b','c','d','e'};
+
+>char S[] = {65,66,67,68,69,70};
 
 A string is a set of characters.
 >char name[10] = {'j','o','h','n'}
@@ -45,9 +47,11 @@ This array of characters is a string now. For storing a string of length n, we t
 
 >char name[] = {'j','o','h','n','\0'}
 
+Below,C compiler will add the delimiter on its own:
+
 > char name[] = "John"
 
-C compiler will add the delimiter on its own
+
 
 ### Declaring and Initializing an array in stack
 This creates string in **heap**:
