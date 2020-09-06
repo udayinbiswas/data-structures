@@ -78,3 +78,5 @@ LowerCase = Add(UpperCase,32)
 1. Hashing characters count in an integer array and check if there is any index with count>1
 
 > Array[s[i]-'a']+=1
+
+2. Bitwise operations
