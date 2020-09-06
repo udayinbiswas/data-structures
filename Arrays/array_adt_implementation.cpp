@@ -1,6 +1,7 @@
 // Array ADT implementation
 // Author : Udayin Biswas, Date : 05/09/2020
 #include <iostream>
+#include <climits>
 using namespace std;
 
 class Array {
@@ -24,17 +25,17 @@ class Array {
             }
         }
         // Append an element to the array
-        void appendElement(int x){
+        void appendElement(int key){
             if (length==size){
                 cout<<"Cannot insert element, array is full"<<endl;
                 return;
             }
-            A[length-1] = x;
+            A[length-1] = key;
             length++;
             return;
         }
         // Inserting an element at a given index
-        void insertElementAtIndex(int x, int index){
+        void insertElementAtIndex(int key, int index){
             if (length==size){
                 cout<<"Cannot insert element, array is full"<<endl;
                 return;
@@ -49,7 +50,7 @@ class Array {
             }
             // When we reach the index, simply put the element we need to insert since all values have been shifted
             // to the right of index
-            A[index] = x;
+            A[index] = key;
             length++;
             return;
         }
@@ -67,9 +68,9 @@ class Array {
             return;
         }
         // Search an element in array
-        int searchElement(int x){
+        int searchElement(int key){
             for (int i=0;i<length;i++){
-                if (A[i]==x){
+                if (A[i]==key){
                     return i;
                 }
             }
@@ -77,19 +78,34 @@ class Array {
         }
         // Get the element in array by index 
         int getElementAtIndex(int index){
-            return 0;
+            if (index<0 || index>=length){
+                return -1;
+            }
+            return A[index];
         }
         // Set the element in array at index
-        void setElementAtIndex(int index,int x){
-
+        void setElementAtIndex(int index,int key){
+            if (index<0 || index>=length){
+                cout<<"Invalid index"<<endl;
+                return;
+            }
+            A[index] = key;
         }
         // Get the max element in array
         int maxElement(){
-            return 0;
+            int maxValue = INT_MIN;
+            for (int i=0;i<length;i++){
+                maxValue = max(maxValue,A[i]);
+            } 
+            return maxValue;
         }
         // Get the min element in array
         int minElement(){
-            return 0;
+            int minValue = INT_MAX;
+            for (int i=0;i<length;i++){
+                minValue = max(minValue,A[i]);
+            } 
+            return minValue;
         }
         // Reverse the array
         void reverseArray(){
