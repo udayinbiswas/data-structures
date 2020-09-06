@@ -7,7 +7,7 @@ using namespace std;
 template<class T> 
 class Array {
     private:
-        int *A;
+        T *A;
         int size;
         int length;
     public:
@@ -63,4 +63,17 @@ T Array<T>::Delete(int index){
         length--;
     }
     return x;
+}
+
+int main()
+{
+    Array<char> arr(10);
+
+    arr.Insert(0,'a');
+    arr.Insert(1,'c');
+    arr.Insert(2,'d');
+    arr.Display();
+    cout<<arr.Delete(0)<<endl;
+    arr.Display();
+    return 0;
 }
