@@ -114,3 +114,6 @@ LowerCase = Add(UpperCase,32)
 
         > a | H // this will set the bit at 4th least significant bit of H i.e. 00001000
     
+### Permutations of a string
+
+We have to do backtracking to explore every permutation which can only be achieved by **Recursion**. In backtracking we adopt brute force approach.

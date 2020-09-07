@@ -1,5 +1,5 @@
 // Finding duplicates in a string using bit operation
-// Author : Udayin Biswas, Date : 05/09/2020
+// Author : Udayin Biswas, Date : 06/09/2020
 #include <iostream>
 #include <string>
 using namespace std;
