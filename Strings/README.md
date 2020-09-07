@@ -55,7 +55,7 @@ Below,C compiler will add the delimiter on its own:
 
 
 
-### Declaring and Initializing an array in stack
+### Declaring and Initializing an array in heap
 This creates string in **heap**:
 
 > char *name = "John";
