@@ -88,15 +88,15 @@ LowerCase = Add(UpperCase,32)
 
     b. AND operation
 
-        If both bits are 1, then it is 1 else 0.
+    If both bits are 1, then it is 1 else 0.
 
     c. OR operation
 
-        If any of bits are 1, then it is 1 else 0.
+    If any of bits are 1, then it is 1 else 0.
 
     d. Bit masking
 
-        To know if a bit is on or off in a byte say H at 4th least significant bit.
+    To know if a bit is on or off in a byte say H at 4th least significant bit.
 
         > a = 1
 
@@ -106,7 +106,7 @@ LowerCase = Add(UpperCase,32)
 
     d. Bit merging
 
-        To set a bit on at some position.
+    To set a bit on at some position.
 
         > a = 1
 
