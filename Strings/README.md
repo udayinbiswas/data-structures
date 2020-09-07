@@ -80,3 +80,37 @@ LowerCase = Add(UpperCase,32)
 > Array[s[i]-'a']+=1
 
 2. Bitwise operations
+
+    a. Left shift operation
+        > H = 1
+
+        > H = H<<1 // Multiplies by 2 and in binary shifts 1 position to left
+
+    b. AND operation
+
+        If both bits are 1, then it is 1 else 0.
+
+    c. OR operation
+
+        If any of bits are 1, then it is 1 else 0.
+
+    d. Bit masking
+
+        To know if a bit is on or off in a byte say H at 4th least significant bit.
+
+        > a = 1
+
+        > a = a<<3
+
+        > a & H // this and will tell us if the bit is on or off if at that position sinceit will give 0 if off
+
+    d. Bit merging
+
+        To set a bit on at some position.
+
+        > a = 1
+
+        > a = a<<3
+
+        > a | H // this will set the bit at 4th least significant bit of H i.e. 00001000
+    
