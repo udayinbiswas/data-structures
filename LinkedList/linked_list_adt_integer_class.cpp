@@ -1,4 +1,4 @@
-// LinkedList template class
+// LinkedList integer class
 // Author : Udayin Biswas, Date : 08/09/2020
 #include <iostream>
 using namespace std;
