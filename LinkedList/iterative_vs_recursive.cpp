@@ -1,7 +1,7 @@
 // Displaying a linked list
 // Author : Udayin Biswas, Date : 08/09/2020
 #include <iostream>
-#include <string>
+#include <climits>
 using namespace std;
 
 struct Node {
@@ -36,9 +36,30 @@ void RecursiveDisplay(Node *head){
     }
 }
 
+int IterativeMax(Node *head){
+    int val = INT_MIN;
+    while (head!=NULL){
+        val = max(head->data,val);
+        head = head->next;
+    }
+    return val;
+}
+
+int RecursiveMax(Node *head){
+    if (head==NULL){
+        // Notice how we are passing INT MIN in terminating condition 
+        // and compare it with how we passed INT MIN in beginning for iterative function
+        return INT_MIN;
+    }
+    int x = max(head->data,RecursiveMax(head->next));
+    return x;
+}
+
 
 int main(){
     int A[] = {3,5,7,10,15};
     Node *head = create(A,5);
     RecursiveDisplay(head);
+    cout<<endl;
+    cout<<"max:"<<RecursiveMax(head)<<endl;
 }
