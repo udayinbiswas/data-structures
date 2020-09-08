@@ -21,7 +21,7 @@ Node* create(int A[],int n){
     return head->next;
 }
 
-void display(Node *head){
+void IterativeDisplay(Node *head){
     while (head!=NULL){
         cout<<head->data<<" ";
         head = head->next;
@@ -29,9 +29,16 @@ void display(Node *head){
     cout<<endl;
 }
 
+void RecursiveDisplay(Node *head){
+    if (head!=NULL){
+        cout<<head->data<<" ";
+        RecursiveDisplay(head->next);
+    }
+}
+
 
 int main(){
     int A[] = {3,5,7,10,15};
     Node *head = create(A,5);
-    display(head);
+    RecursiveDisplay(head);
 }
