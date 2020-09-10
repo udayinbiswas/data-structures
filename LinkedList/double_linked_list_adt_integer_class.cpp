@@ -7,53 +7,57 @@ class  Node {
     public:
         int data;
         Node *next;
+        Node *prev;
 };
 
-class CircularLinkedList {
+class DoubleLinkedList {
     private:
         Node *head;
     public:
         // Constructors
-        CircularLinkedList(){head=NULL;}
-        CircularLinkedList(int array[],int length){
+        DoubleLinkedList(){head=NULL;}
+        DoubleLinkedList(int array[],int length){
             head = new Node; // declaring head in heap, not stack
             // if we did Node *head; and then head=b where b is in heap, head will still be in stack and returning pointer 
             // would be useless in this to main function
             Node *p = head;
             for (int i=0;i<length;i++){
+                Node *last = p;
                 p->next = new Node;
+                p->next->prev = p;
                 p = p->next;
                 p->data = array[i];
+                p->next= NULL; // PUT THIS OTHERWISE SEGMENTATION FAULT WHILE DISPLAYING LATER. Last node should point to NULL 
+                // If we don't, it won't assume NULL on its own.
             }
             head = head->next;
-            p->next = head; // in circular linked list, last node should point to head
+            head->prev = NULL;
         }
         // Destructor
-        ~CircularLinkedList(){
+        ~DoubleLinkedList(){
             Node *p = head;
-            do {
+            while (p!=NULL){
                 delete p;
                 p = p->next;
-            } while (p!=head);
+            }
         }
         // Display linked list
         void Display(){
             Node *p = head;
-            do {
+            while (p!=NULL){
                 cout<<p->data<<" ";
                 p = p->next;
-            } while (p!=head);
-            
-            cout<<endl; 
+            }
+            cout<<endl;
         }
         // Length of linked list
         int Length(){
             Node *p = head;
             int count = 0;
-            do {
+            while (p!=NULL){
                 count++;
                 p = p->next;
-            } while (p!=head);
+            }
             return count;
         }
         // Insert in Linked list
@@ -62,11 +66,8 @@ class CircularLinkedList {
             n->data = val;
             if (index==0){
                 n->next = head;
-                Node *p = head;
-                while (p->next!=head){
-                    p = p->next;
-                }
-                p->next = n;
+                n->prev = NULL;
+                head->prev = n;
                 head = n;
                 return;
             } 
@@ -77,7 +78,9 @@ class CircularLinkedList {
                     // Insert
                     Node* q = p->next;
                     p->next = n;
+                    n->prev = p;
                     n->next = q;
+                    q->prev = n;
                     p = p->next;
                     break;
                 } else {
@@ -95,13 +98,9 @@ class CircularLinkedList {
             if (index==0){
                 int val = head->data;
                 Node *p = head;
-                while (p->next!=head){
-                    p = p->next;
-                }
-                Node *temp = head;
-                p->next = head->next;
                 head = head->next;
-                delete temp;
+                head->prev = NULL;
+                delete p;
                 return val;
             }
             Node *p = head;
@@ -113,6 +112,7 @@ class CircularLinkedList {
                         Node *q = p->next->next;
                         delete p->next;
                         p->next = q;
+                        q->prev = p;
                         return val;
                     }
                 } else {
@@ -126,17 +126,12 @@ class CircularLinkedList {
 
 int main(){
     int x[5] = {1,3,5,7,10};
-    CircularLinkedList l = CircularLinkedList(x,5);
+    DoubleLinkedList l = DoubleLinkedList(x,5);
     l.Display();
     cout<<"Length:"<<l.Length()<<endl;
     l.Insert(9,4);
     l.Display();
-    l.Insert(12,0);
-    l.Display();
-    cout<<"Length:"<<l.Length()<<endl;
     l.Delete(1);
-    l.Display();
     l.Delete(0);
     l.Display();
-    return 0;
 }

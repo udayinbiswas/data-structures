@@ -17,5 +17,5 @@ Recursive traversal of Linked List with n nodes means n+1 activation records wil
 ## Types of linked list
 
 1. Singly linked list
-2. Circular linked list (the last node points to the first node)
-3. Doubly linked list
+2. Circular linked list :the last node points to the first node
+3. Doubly linked list: we can ahead or back in the linked list with help of 2 points. e.g.: contact list or pages opening on same tab in a browser.
