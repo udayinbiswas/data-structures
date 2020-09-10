@@ -8,7 +8,8 @@ When hashing is many to one, chaining can occur and two keys can get mapped at s
 ## How to solve collisions?
 
 1. **Open Hashing**
-    a. **Chaining** : We chain the keys which fall under the same index in hash table. The hash table is basically an array of linked lists. They keys must be kept in sorted order in linked list.
+    
+    **Chaining** : We chain the keys which fall under the same index in hash table. The hash table is basically an array of linked lists. They keys must be kept in sorted order in linked list.
 
     Analysis of hashing function is done by loading factor:
 
