@@ -1,5 +1,5 @@
-// LinkedList integer class
-// Author : Udayin Biswas, Date : 08/09/2020
+// LinkedList circular integer class
+// Author : Udayin Biswas, Date : 10/09/2020
 #include <iostream>
 using namespace std;
 
