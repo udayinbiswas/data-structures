@@ -31,6 +31,7 @@ When hashing is many to one, chaining can occur and two keys can get mapped at s
     a. **Open Addressing** : We don't create chains but rather store the key at another place in the hash table in case of collisions.
 
     1. **Linear Probing:**
+    
     > h(key) = (h(key)+f(i))%(hash_table_size) where i=0,1,2,....
 
     So in linear probing, we try to store the key at its meant position and if it is already occupied, we try to fill the 
