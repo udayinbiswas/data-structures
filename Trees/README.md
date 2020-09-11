@@ -1,6 +1,6 @@
-# TREES #
+# TREES 
 
-## POINTS ABOUT TREES:##
+## POINTS ABOUT TREES:
 1. N nodes in a tree => N-1 edges . There are no cycles in a tree or double edge between any two nodes.
 
 2. Leaf/External nodes have degree 0 => 0 children.
@@ -16,7 +16,7 @@ i = 0 to n-1.
 
 ## BINARY TREE
 
-### HEIGHT VS NODES IN BINARY TREE:###
+### HEIGHT VS NODES IN BINARY TREE:
 
 1. Minimum nodees in a tree of height h is if the tree is skewed: h+1
 
@@ -30,11 +30,11 @@ So we get number of nodes as **n = 2^(h+1)-1**. For height = 3, we get 15 nodes.
 
 4. Minimum height given n nodes is obtained by just using (3) formula. **h = log(n+1)-1**
 
-### INTERNAL VS EXTERNAL NODES IN BINARY TREE:###
+### INTERNAL VS EXTERNAL NODES IN BINARY TREE:
 
 > degree(0) nodes = degree(2) nodes + 1
 
-## STRICT BINARY TREES ##
+## STRICT BINARY TREES
 
 In a strict binary tree, a node can have only 0 or 2 children.
 
@@ -42,21 +42,21 @@ In a strict binary tree, a node can have only 0 or 2 children.
 
 2. Max number of nodes is same as binary tree that is **nodes = 2^(h+1)-1**
 
-### INTERNAL VS EXTERNAL NODES IN BINARY TREE:###
+### INTERNAL VS EXTERNAL NODES IN BINARY TREE:
 
 > degree(0) nodes = degree(2) nodes + 1
 
 This basically means external nodes = internal nodes+1
 
-## STRICT N-ARY TREES ##
+## STRICT N-ARY TREES
 
 An n-ary tree can have atmost n children. A strict n-ary tree similarly can have either 0 or n children.
 
-### HEIGHT VS NODES IN STRICT N-ARY TREE:###
+### HEIGHT VS NODES IN STRICT N-ARY TREE:
 
 1. Minimum number of nodes in strict n-ary tree is **nodes=n*h+1** and maximum is **nodes = (n^(h+1)-1)/(m-1)**
 
-### INTERNAL VS EXTERNAL NODES IN STRICT N-ARY TREE:###
+### INTERNAL VS EXTERNAL NODES IN STRICT N-ARY TREE:
 
 > e = (n-1)*i+1
 
