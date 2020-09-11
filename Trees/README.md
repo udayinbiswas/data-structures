@@ -60,3 +60,8 @@ An n-ary tree can have atmost n children. A strict n-ary tree similarly can have
 
 > e = (n-1)*i+1
 
+## REPRESENTATION OF BINARY TREES:
+
+1. *Array representation* :  An element at index i will have left child at 2*i and right child at 2*i+1.
+
+2. *Linked List representation*
