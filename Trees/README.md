@@ -52,7 +52,7 @@ This basically means external nodes = internal nodes+1
 
 An n-ary tree can have atmost n children. A strict n-ary tree similarly can have either 0 or n children.
 
-### HEIGHT VS NODES IN STRICT N-ARY TREE:
+#### HEIGHT VS NODES IN STRICT N-ARY TREE:
 
 1. Minimum number of nodes in strict n-ary tree is **nodes=n*h+1** and maximum is **nodes = (n^(h+1)-1)/(m-1)**
 
