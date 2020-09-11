@@ -65,3 +65,25 @@ An n-ary tree can have atmost n children. A strict n-ary tree similarly can have
 1. *Array representation* :  An element at index i will have left child at 2*i and right child at 2*i+1.
 
 2. *Linked List representation*
+
+## TYPES OF BINARY TREES
+
+A *full binary tree* has maximum nodes 2^(h+1)-1. Array representation is easy to visualise here.
+
+A *complete binary tree* has all nodes filled till height h-1 i.e. full binary tree till h-1 and in last level elements are filled only from left to right. Array representation won't have any blank spaces.
+
+When we store strict binary tree, it can have blank spaces. But in complete, we won't have blank spaces in between.
+
+## TRAVERSALS
+
+There are many types of traversals: Preorder, Inorder, Postorder, Level Order.
+
+We call the traversal method n times on each of the tree nodes and n+1 times on the children of leaf nodes which are n+1 times on the null children of nodes. So 2n+1 times stack activation records are created and in each of those, we do a print method which is constant time. So overall order is O(2*n+1)~ O(n). Maximum size of the stack at any time or space complexity is height+2 i.e. log(n) if its not skewed tree. If it is skewed, then O(n).
+
+Count of nodes in a tree means we would do postorder traversal - count method would call count on left subtree, then on right 
+subtree and then returns their sum plus current root node. Infact most of the methods work by a way of postorder traversal.
+
+We can generate Catalan number of trees as we discussed above, when given the list of any traversal. For e.g.: given preorder traversal list : A,B,C  , we can generate 5 trees representing it. So preorder traversal list is not enough to generate a tree, same applies for inorder and postorder.
+
+To generate a tree from traversals, we need atleast inorder traversal and along with it either preorder or postorder. It takes 
+O(n^2) time since for each node in preorder list, we have to search for it in inorder list which can take O(n) time. Overall for n nodes in preorder list, it would be be O(n^2).
