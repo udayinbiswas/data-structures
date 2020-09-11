@@ -33,18 +33,25 @@ When hashing is many to one, chaining can occur and two keys can get mapped at s
 
     **Linear Probing:**
 
-    > h(key) = (h(key)+f(i))%(hash_table_size) where i=0,1,2,....
+    > h(key) = (h(key)+f(i))%(hash_table_size) where f(i)=i,i=0,1,2,....
 
     So in linear probing, we try to store the key at its meant position and if it is already occupied, we try to fill the 
     next empty position in the table.
     
-    **Condition:** Lambda or the loading factor has to be less than equals 0.5 so that number of elements cannot exceed half 
+    ***Condition:*** Lambda or the loading factor has to be less than equals 0.5 so that number of elements cannot exceed half 
     the table size and we can place the keys close to their meant positions.
 
-    **Disadvantages:**
+    ***Disadvantages:**()
     1. Clustering of keys with same hash value in consecutive array elements, which displaces some keys which are introduced later and see their positions occupied by other out-of-order keys.
 
     2. For searching some key, we may have to travel across many elements before we get to that key in table.
     
     3. If we delete a key, other keys after it in table may also be shifted left. Delete is a complex operation, we will have to insert all elements again. e.g.: removing 24 from index 4 means if 34 is at index 5, we will have to shift it
     to index 4 and so on. This is very difficult to implement so we just have to insert all over again.
+
+    **Quadratic Probing:**
+
+    To avoid the clustering in linear probing due to keys getting same hash value and getting placeed in consecutive locations, we can
+    modify the probing function slightly:
+
+    > h(key) = (h(key)+f(i))%(hash_table_size) where f(i)=i^2,i=0,1,2,....
