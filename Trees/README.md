@@ -14,10 +14,35 @@
 6. Number of binary trees that can be constructed from n nodes is Catalan number formula. T(n) = Sum up T(i)*T(n-i-1) where
 i = 0 to n-1.
 
-7. Minimum nodees in a tree of height h is if the tree is skewed: h+1
+## BINARY TREE
 
-8. Max number of nodes in a tree of height h is : 1+2+2^2+....+2^h. This is a GP series.
+### HEIGHT VS NODES IN BINARY TREE:###
+
+1. Minimum nodees in a tree of height h is if the tree is skewed: h+1
+
+2. Max number of nodes in a tree of height h is : 1+2+2^2+....+2^h. This is a GP series.
 
 > a + a*(r^2) + ... + a*(r^h) = a (r^(h+1)-1)/(r-1)
 
-So we get number of nodes as 2^(h+1)-1. For height = 3, we get 15 nodes. 
+So we get number of nodes as **n = 2^(h+1)-1**. For height = 3, we get 15 nodes. 
+
+3. Maximum height given n nodes is : n-1
+
+4. Minimum height given n nodes is obtained by just using (3) formula. **h = log(n+1)-1**
+
+### INTERNAL VS EXTERNAL NODES IN BINARY TREE:###
+
+> degree(0) nodes = degree(2) nodes + 1
+
+## STRICT BINARY TREES ##
+
+In a strict binary tree, a node can have only 0 or 2 children.
+
+1. Minimum number of nodes given height h is : {1+2+...+2^(h-1)}+2 where 2 is minimum number of nodes we need to add at last level to keep it strict binary tree. So we get number of 
+nodes as **n=2^h-1**
+
+2. Max number of nodes is same as binary tree that is **n = 2^(h+1)-1**
+
+### INTERNAL VS EXTERNAL NODES IN BINARY TREE:###
+
+> degree(0) nodes = degree(2) nodes + 1
