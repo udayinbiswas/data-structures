@@ -38,11 +38,25 @@ So we get number of nodes as **n = 2^(h+1)-1**. For height = 3, we get 15 nodes.
 
 In a strict binary tree, a node can have only 0 or 2 children.
 
-1. Minimum number of nodes given height h is : {1+2+...+2^(h-1)}+2 where 2 is minimum number of nodes we need to add at last level to keep it strict binary tree. So we get number of 
-nodes as **n=2^h-1**
+1. Minimum number of nodes given height h is : 2h+1 since we need to extend only one branch of the tree till height h so all levels will have 2 nodes except for level 0 where we have 1 single root.
 
-2. Max number of nodes is same as binary tree that is **n = 2^(h+1)-1**
+2. Max number of nodes is same as binary tree that is **nodes = 2^(h+1)-1**
 
 ### INTERNAL VS EXTERNAL NODES IN BINARY TREE:###
 
 > degree(0) nodes = degree(2) nodes + 1
+
+This basically means external nodes = internal nodes+1
+
+## N-ARY TREES ##
+
+An n-ary tree can have atmost n children. A strict n-ary tree similarly can have either 0 or n children.
+
+### HEIGHT VS NODES IN STRICT N-ARY TREE:###
+
+1. Minimum number of nodes in strict n-ary tree is **nodes=n*h+1** and maximum is **nodes = (n^(h+1)-1)/(m-1)**
+
+### INTERNAL VS EXTERNAL NODES IN STRICT N-ARY TREE:###
+
+> e = (n-1)*i+1
+
