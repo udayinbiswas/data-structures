@@ -48,7 +48,7 @@ In a strict binary tree, a node can have only 0 or 2 children.
 
 This basically means external nodes = internal nodes+1
 
-## N-ARY TREES ##
+## STRICT N-ARY TREES ##
 
 An n-ary tree can have atmost n children. A strict n-ary tree similarly can have either 0 or n children.
 
