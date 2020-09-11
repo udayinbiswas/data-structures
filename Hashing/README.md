@@ -55,3 +55,16 @@ When hashing is many to one, chaining can occur and two keys can get mapped at s
     modify the probing function slightly:
 
     > h(key) = (h(key)+f(i))%(hash_table_size) where f(i)=i^2,i=0,1,2,....
+
+    **Double hashing:**
+
+    To avoid clustering in linear probing and distribute keys across hash table, we can also use double hashing technique:
+
+    > h1(x) = x%10;
+
+    > h2(x) = 7-(x%7);
+
+    > h'(x) = (h1(x)+i*h2(x))%10; where i=0,1,2,...
+
+    So h'(x) is the hashing method used. When a key is hashed, i=0 initially and it checks if the spot is occupied. If it is, then i=1
+    and then again checks. This goes on till it finds an empty spot to place the key.
