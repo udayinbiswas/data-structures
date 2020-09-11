@@ -68,3 +68,22 @@ When hashing is many to one, chaining can occur and two keys can get mapped at s
 
     So h'(x) is the hashing method used. When a key is hashed, i=0 initially and it checks if the spot is occupied. If it is, then i=1
     and then again checks. This goes on till it finds an empty spot to place the key.
+
+3. **Other Hashing techniques:**
+
+    1. **Mod**
+
+    > h(x) = (x%size)+1
+
+    2. **Midsquare**
+
+    > h(x) = take the middle digit of x^2
+
+    For e.g.: 13^2 = 169 so we place 13 in 6th index.
+
+    3. **Folding**
+
+    Here we take first 2 digits each and then sum up all of them. e.g.: summing up 12,33 & 47 in 123347 and getting 92 so we take 
+    it as index.
+
+    We can decide on our own unique hashing technique on condition that it always gives same hash value for a key.
