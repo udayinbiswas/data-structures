@@ -1,5 +1,5 @@
-// Array ADT integer class implementation
-// Author : Udayin Biswas, Date : 06/09/2020
+// Circular queue integer class implementation
+// Author : Udayin Biswas, Date : 12/09/2020
 
 #include <iostream>
 using namespace std;
