@@ -1,4 +1,4 @@
-// Circular queue integer class implementation
+// dequeue circular integer class implementation 
 // Author : Udayin Biswas, Date : 12/09/2020
 
 #include <iostream>
