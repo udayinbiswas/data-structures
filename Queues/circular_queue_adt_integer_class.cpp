@@ -51,6 +51,7 @@ bool CircularQueue::isEmpty(){
 }
 
 void CircularQueue::enqueue(int x){
+    
     if (isFull()) cout<<"Queue is full,cannot enequeue element "<<x<<endl;
     if (isEmpty()){ // i.e. no element in queue
         front = (front+1)%size; // becomes 0th index since front=-1
@@ -92,4 +93,5 @@ int main(){
     q.enqueue(7);
     q.dequeue();
     q.display();
+    return 0;
 }
