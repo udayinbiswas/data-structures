@@ -9,7 +9,7 @@ class CircularQueue {
         int *A;
         int front; // points to the first element in queue
         int rear; // points to the last element in queue
-        int size;
+        int size; // size of array
     public:
         CircularQueue();
         CircularQueue(int size);
@@ -53,8 +53,8 @@ bool CircularQueue::isEmpty(){
 void CircularQueue::enqueue(int x){
     if (isFull()) cout<<"Queue is full,cannot enequeue element "<<x<<endl;
     if (isEmpty()){ // i.e. no element in queue
-        front = (front+1)%size;
-        rear = (rear+1)%size;
+        front = (front+1)%size; // becomes 0th index since front=-1
+        rear = (rear+1)%size; // becomes 0th index since rear=-1
     } else {
         rear = (rear+1)%size;
     }
@@ -67,7 +67,7 @@ int CircularQueue::dequeue(){
     int val = -1;
     if (front==rear){
         val = A[front];
-        front = rear = -1;
+        front = rear = -1; // reset front and rear to -1 to represent empty queue
     } else {
         val = A[front];
         front = (front+1)%size;
