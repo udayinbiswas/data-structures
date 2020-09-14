@@ -73,6 +73,11 @@ class BinarySearchTree{
             return p;
         }
 
+        int Height(Node *p){
+            if (p==NULL) return 0; 
+            return 1+max(Height(p->left),Height(p->right));
+        }
+
         void RecursiveDelete(int key){RecursiveDelete(key,root);}
 
         // Notice how recursive DELETE is done by pointing the left or right pointer to returning node from a call to child.
@@ -81,21 +86,24 @@ class BinarySearchTree{
                 return NULL;
             }
             if (p->data==key){
-                if (p->left!=NULL){
-                    Node *pred = inorderPredecessor(p);
-                    p->data = pred->data;
-                    p->left = RecursiveDelete(pred->data,p->left);
-                } else if (p->right!=NULL){
-                    Node *succ = inorderSuccessor(p);
-                    p->data = succ->data;
-                    p->right = RecursiveDelete(succ->data,p->right);
-                } else {
+                // We can also delete from left or right based on height of the tree
+                if (p->left==NULL && p->right==NULL){
                     // it is a leaf
                     if (p==root){
                         root = NULL;
                     }
                     delete p;
                     return NULL;
+                } else {
+                    if (Height(p->left)>=Height(p->right)){
+                        Node *pred = inorderPredecessor(p);
+                        p->data = pred->data;
+                        p->left = RecursiveDelete(pred->data,p->left);
+                    } else {
+                        Node *succ = inorderSuccessor(p);
+                        p->data = succ->data;
+                        p->right = RecursiveDelete(succ->data,p->right);
+                    }
                 }
             } else if (p->data>key){
                 p->left = RecursiveDelete(key,p->left);
@@ -171,15 +179,15 @@ int main(){
     bst.inOrderTraversal(); cout<<endl;
     bst.RecursiveInsert(30);
     bst.inOrderTraversal(); cout<<endl;
-    bst.RecursiveDelete(20);
+    bst.RecursiveDelete(10);
     bst.inOrderTraversal(); cout<<endl;
     // Inorder traversal
-    bst.RecursiveDelete(10);
+    bst.RecursiveDelete(8);
     bst.inOrderTraversal(); cout << endl;
     
  
     // Search
-    Node* temp = bst.Search(8);
+    Node* temp = bst.Search(10);
     if (temp != NULL){
         cout << temp->data << endl;
     } else {
