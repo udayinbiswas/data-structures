@@ -17,3 +17,7 @@
 Post this we compare root with its children and replace it with the bigger child each time, repeat this procedure.
 
 8. Priority queue is an abstract data structure which can be implemented by heap. Insert and deleting an element will both take O(log n) time.
+
+9. In Insert, the direction of adjustment is leaf towards node and in delete, it is root towards leaf.
+
+10. Heapify is a faster method of creating a heap where we move from node towards leaf. We start from end of array and for each element we see if it can be replaced by its children. If it can be, then repeat the entire process downwards. Otherwise stop. This process takes **O(n)** method since we do not consider leaves.
