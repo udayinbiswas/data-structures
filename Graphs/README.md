@@ -37,7 +37,7 @@ is always connected. Non connected graph is where nodes are divided into multipl
 
 5. If we use heap data structure to find minimum edge among edges, time can be reduced to (|V-1|)*(log E)
 
-## Kruskal Algorithms
+## Kruskal Algorithm for MST
 
 1. Take the minimum cost edge in each step but if the edge forms a cycle, then skip it.
 
