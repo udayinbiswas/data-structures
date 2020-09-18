@@ -36,3 +36,13 @@ is always connected. Non connected graph is where nodes are divided into multipl
 4. Time taken is |V-1| * E since for after each vertex addition, we can explore atmost E edges.
 
 5. If we use heap data structure to find minimum edge among edges, time can be reduced to (|V-1|)*(log E)
+
+## Kruskal Algorithms
+
+1. Take the minimum cost edge in each step but if the edge forms a cycle, then skip it.
+
+2. Minimum time taken is |V-1| * E since for finding minimum edge, we need to go through all E edges each time. 
+
+3. If we take min heap, then it will take log E time to find minimum edge. So time is (|V-1|)*(log E).
+
+4. **Disjoint subset**: 2 sets such that their intersection is empty. It is used for detecting cycles. There are 2 operations that are performed: Union and Find. *Weighted union* is merging two subsets with parent as the parent of the subset which has more elements. The purpose of making set is to find whether 2 elements have the same parent and if they do, an edge joining them will form a cycle. *Find* operation will help find the parent of the set to which an element belongs.
